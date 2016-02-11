@@ -1,0 +1,13 @@
+<%= simple_form_for(@cocktail) do |f| %>
+
+    <%= f.input :name %>
+
+    <%= f.input :price %>
+
+    <%= f.input :alcool_degree %>
+
+    <%= f.input :origin %>
+
+    <%= f.button :submit, class: "btn btn-danger" %>
+
+<% end %>

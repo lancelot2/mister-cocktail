@@ -1,0 +1,14 @@
+<div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://goo.gl/I5Pz5B');">
+  <div class="card-category"><%= cocktail.origin %></div>
+  <div class="card-description">
+    <h2><%= cocktail.name %></h2>
+    <p>
+      <% if cocktail.price %>
+        <%= cocktail.price.times do %>
+        <i class="fa fa-dollar"></i>
+        <% end %>
+      <% end %>
+    </p>
+  </div>
+  <%= link_to "", cocktail_path(cocktail), { class: "card-link" } %>
+</div>

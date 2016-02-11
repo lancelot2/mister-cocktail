@@ -1,0 +1,14 @@
+
+<div class="container">
+
+  <h1 class="text-center">Listing of exquisite cocktails in Paris</h1>
+
+  <div class="row">
+    <% @cocktails.each do |cock| %>
+      <div class="col-xs-12 col-sm-4">
+        <%= render "cocktail_card", cocktail: cock %>
+      </div>
+    <% end %>
+  </div>
+
+</div>

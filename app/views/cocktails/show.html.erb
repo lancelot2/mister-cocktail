@@ -1,0 +1,43 @@
+<div class="container">
+
+<h1>Cocktail details</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cocktail.name %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @cocktail.origin %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @cocktail.price %>
+</p>
+
+<p>
+  <strong>Alcool Degree:</strong>
+  <%= @cocktail.alcool_degree %>
+</p>
+
+<hr>
+
+<h2>Recipe</h2>
+
+<ul> <% @cocktail.doses.each do |dose| %>
+  <li><tr><%= dose.ingredient.name %> | Quantity: <%= dose.description %></tr>
+  <tr><%= link_to  cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: "Are you really really sure?" }, class: "btn btn-danger" do %>
+        <i class="fa fa-trash"></i> Delete
+        <% end %>
+  </tr>
+  </li>
+  <% end %>
+</ul>
+
+<hr>
+
+<%= link_to 'Add a new ingredient to the recipe', new_cocktail_dose_path(@cocktail) %>
+
+</div>
