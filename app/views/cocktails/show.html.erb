@@ -1,26 +1,33 @@
 <div class="container">
 
-<h1>Cocktail details</h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @cocktail.name %>
-</p>
+  <div class="row">
 
-<p>
-  <strong>Origin:</strong>
-  <%= @cocktail.origin %>
-</p>
+    <div class="col-xs-12 col-sm-6" >
+    <img class="profile-picture" src="<%= @cocktail.picture %>" >
+    </div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @cocktail.price %>
-</p>
+    <div class="col-xs-12 col-sm-6">
+      <h1>Cocktail details</h1>
+      <p>
+        <strong>Name:</strong>
+        <%= @cocktail.name %>
+      </p>
+      <p>
+        <strong>Origin:</strong>
+        <%= @cocktail.origin %>
+      </p>
+      <p>
+        <strong>Price:</strong>
+        <%= @cocktail.price %>
+      </p>
+      <p>
+        <strong>Alcool Degree:</strong>
+        <%= @cocktail.alcool_degree %>
+      </p>
+    </div>
 
-<p>
-  <strong>Alcool Degree:</strong>
-  <%= @cocktail.alcool_degree %>
-</p>
+  </div>
 
 <hr>
 
