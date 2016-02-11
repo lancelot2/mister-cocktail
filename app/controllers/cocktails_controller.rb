@@ -6,6 +6,7 @@ class CocktailsController < ApplicationController
 
   def show          # GET /cocktails/:id
     @cocktail = Cocktail.find(params[:id])
+    @dose = Dose.new
   end
 
   def new           # GET /cocktails/new

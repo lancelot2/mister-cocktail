@@ -1,0 +1,11 @@
+<div class="form2">
+    <h2>Add an ingredient to the recipe</h2>
+
+
+  <%= simple_form_for [@cocktail, @dose] do |f|%>
+
+    <%= f.input :ingredient_id, collection: Ingredient.all, label: "Ingredients"%>
+    <%= f.input :description, label: "Description" %>
+    <%= f.button :submit, {class: "btn btn-primary"} %>
+  <% end %>
+</div>
